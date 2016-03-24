@@ -1,0 +1,12 @@
+---
+### Tested in version ansible version 1.9.3
+
+### To run the playbook
+# DRY RUN: ansible-playbook -i hosts site.yml -v --ask-sudo-pass --check
+# RUN: ansible-playbook -i hosts site.yml -v --ask-sudo-pass
+
+- name: Install ruby
+  hosts: all
+  roles:
+    - role: ruby
+  sudo: yes
